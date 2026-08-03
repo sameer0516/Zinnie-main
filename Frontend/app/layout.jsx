@@ -78,6 +78,7 @@ export const metadata = {
     follow: true,
   },
 };
+//  global
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -100,6 +101,7 @@ const organizationSchema = {
     availableLanguage: ["English", "Hindi"],
   },
 };
+//  global
 
 const websiteSchema = {
   "@context": "https://schema.org",

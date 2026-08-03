@@ -1,10 +1,3 @@
-// ─────────────────────────────────────────────────────────────
-// productSchemas.js
-// Exact JSON-LD (FULL SCHEMA + FAQ SCHEMA) for each product,
-// keyed by URL slug. Values are transcribed as-is from the
-// per-product schema you supplied — no dynamic recomputation,
-// so what renders on the page is exactly what you gave.
-// ─────────────────────────────────────────────────────────────
 
 export const productSchemas = {
   // ───────────────────────────────────────────

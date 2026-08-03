@@ -75,27 +75,24 @@ export const metadata = {
   },
 };
 
-// Webpage Schema
-const webpageSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://zinniezeera.com/product/#webpage",
-  url: "https://zinniezeera.com/product/",
-  name: "Zinnie Soft Drinks Products",
-  isPartOf: {
-    "@id": "https://zinniezeera.com/product/#website",
-  },
-  about: {
-    "@id": "https://zinniezeera.com/product/#organization",
-  },
-  description:
-    "Explore Zinnie's soft drink collection, including Zeera Masala Soda, Nimbu Zeera Drink, Mango Drink, Ginger Lemon Drink, and more refreshing beverages.",
-};
-
-// Combined Schema: CollectionPage + ItemList + BreadcrumbList + AggregateRating
+// Combined Schema: WebPage + CollectionPage + ItemList + BreadcrumbList + AggregateRating
 const combinedSchema = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://zinniezeera.com/product/#webpage",
+      url: "https://zinniezeera.com/product/",
+      name: "Zinnie Soft Drinks Products",
+      isPartOf: {
+        "@id": "https://zinniezeera.com/product/#website",
+      },
+      about: {
+        "@id": "https://zinniezeera.com/product/#organization",
+      },
+      description:
+        "Explore Zinnie's soft drink collection, including Zeera Masala Soda, Nimbu Zeera Drink, Mango Drink, Ginger Lemon Drink, and more refreshing beverages.",
+    },
     {
       "@type": "CollectionPage",
       "@id": "https://zinniezeera.com/product/#collection",
@@ -376,10 +373,6 @@ export default async function ProductPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
